@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd
+                             http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID"
+         version="5.0">
+
+    <display-name>SampleJspServlet</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>readHello</servlet-name>
+        <servlet-class>chapter4.Chapter4WebXmlMapping</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>readReadSheet2</servlet-name>
+        <servlet-class>ReadSheet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>readHello</servlet-name>
+        <url-pattern>/chapter4Hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>readReadSheet2</servlet-name>
+        <url-pattern>/sampleSheet2</url-pattern>
+    </servlet-mapping>
+
+    <!-- 参照画面 -->
+    <servlet>
+        <servlet-name>readDateBase</servlet-name>
+        <servlet-class>Read</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>readDateBase</servlet-name>
+        <url-pattern>/read</url-pattern>
+    </servlet-mapping>
+
+    <!-- 更新画面 -->
+    <servlet>
+        <servlet-name>UpdateDateBase</servlet-name>
+        <servlet-class>Update</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateDateBase</servlet-name>
+        <url-pattern>/Update</url-pattern>
+    </servlet-mapping>
+
+</web-app>
