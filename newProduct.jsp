@@ -20,7 +20,8 @@
     			
     			<td>
   					<input type="text" name="ID" value="${IDKEY}"
-         				<c:if test="${disableIDKEY}">disabled</c:if>>
+         				<c:if test="${selectKEY}">disabled</c:if>>
+         				<!-- <input type="hidden" name="ID"value="${IDKEY}"> -->
   				</td>
 
     		</tr>
@@ -49,9 +50,9 @@
     			<td>
     				<select name="CATEGORYID">
  <c:forEach var="list" items="${productList}">
-    <option value="${list.CATEGORYID}" 
-        <c:if test="${list.CATEGORYID == CATEGORYID}">selected</c:if>>
-        ${list.CATEGORYNAME}
+    <option value="${list.categoryId}" 
+        <c:if test="${list.categoryId == categoryId}">selected</c:if>>
+        ${list.categoryName}
     </option>
 </c:forEach>
 
@@ -61,10 +62,26 @@
     	</table>
     	<input type="submit" name="botan" value="登録" class="margin" />
     	<input type="hidden" name="taiga" value="taiga"/>
+    	
     	<input type="submit" name="botan" value="検索" class="color" />
-    	<input type="submit" name="botan" value="更新" class="color" />
-    	<input type="submit" name="botan" value="削除" class="color" />
+    	
+    	<input type="submit" name="botan" value="更新" class="color" 
+    	<c:if test="${updateKEY}">disabled</c:if>>
+    	
+    	<input type="submit" name="botan" value="削除" class="color" 
+    	<c:if test="${deleteKEY}">disabled</c:if>>
     </form>
 	<p>${MSGKEY}</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

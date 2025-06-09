@@ -5,55 +5,52 @@ package bean;
  */
 public class ProductBean {
     // 商品ID
-    private int PRODUCTID;
+    private int productId;
     // 商品コード
-    private int PRODUCTCODE;
+    private int productCode;
     // 商品名
-    private String PRODUCTNAME;
+    private String productName;
     // 価格(単価)
-    private int PRICE;
- // カテゴリID
-    private int CATEGORYID;
+    private int price;
+    // カテゴリID
+    private int categoryId;
     // カテゴリーネーム
-    private String CATEGORYNAME;
+    private String categoryName;
     
-    
-    // getterとsetter
-    public int getPRODUCTID() {
-        return PRODUCTID;
+    public int getProductId() {
+        return productId;
     }
-    public void setPRODUCTID(int pRODUCTID) {
-        PRODUCTID = pRODUCTID;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
-    public int getPRODUCTCODE() {
-        return PRODUCTCODE;
+    public int getProductCode() {
+        return productCode;
     }
-    public void setPRODUCTCODE(int pRODUCTCODE) {
-        PRODUCTCODE = pRODUCTCODE;
+    public void setProductCode(int productCode) {
+        this.productCode = productCode;
     }
-    public String getPRODUCTNAME() {
-        return PRODUCTNAME;
+    public String getProductName() {
+        return productName;
     }
-    public void setPRODUCTNAME(String pRODUCTNAME) {
-        PRODUCTNAME = pRODUCTNAME;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
-    public int getPRICE() {
-        return PRICE;
+    public int getPrice() {
+        return price;
     }
-    public void setPRICE(int pRICE) {
-        PRICE = pRICE;
+    public void setPrice(int price) {
+        this.price = price;
     }
-    public int getCATEGORYID() {
-        return CATEGORYID;
+    public int getCategoryId() {
+        return categoryId;
     }
-    public void setCATEGORYID(int cATEGORYID) {
-        CATEGORYID = cATEGORYID;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
-    public String getCATEGORYNAME() {
-        return CATEGORYNAME;
+    public String getCategoryName() {
+        return categoryName;
     }
-    public void setCATEGORYNAME(String cATEGORYNAME) {
-        CATEGORYNAME = cATEGORYNAME;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
-    
 }
